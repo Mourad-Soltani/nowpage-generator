@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}'s Now Page</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 700px; margin: 60px auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
+        h2 { margin-top: 30px; color: #555; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}'s Now</h1>
+    <p><em>This is a now page. What I'm focused on right now.</em></p>
+    {% if working_on %}
+    <h2>Working on</h2>
+    <p>{{ working_on }}</p>
+    {% endif %}
+    {% if reading %}
+    <h2>Reading</h2>
+    <p>{{ reading }}</p>
+    {% endif %}
+    {% if exploring %}
+    <h2>Exploring</h2>
+    <p>{{ exploring }}</p>
+    {% endif %}
+    {% if note %}
+    <h2>Note</h2>
+    <p>{{ note }}</p>
+    {% endif %}
+    <div class="footer">Generated with NowPageGen by Mourad.Soltani</div>
+</body>
+</html>
